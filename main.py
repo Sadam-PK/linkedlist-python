@@ -19,6 +19,12 @@ class LinkedList:
                 tail = tail.next
             tail.next = new_node
 
+    def at_head(self, new_node):
+        temp = self.head
+        self.head = new_node
+        self.head.next = temp
+        del temp
+
     def display(self):
         current = self.head
         while True:
@@ -33,10 +39,12 @@ nn = Node('sadam')
 linkedlist = LinkedList()
 linkedlist.insert(nn)
 
-nn1 = Node('hamza')
-linkedlist.insert(nn1)
+nn = Node('hamza')
+linkedlist.insert(nn)
 
-nn2 = Node('asad')
-linkedlist.insert(nn2)
+nn = Node('asad')
+linkedlist.insert(nn)
 
+nn = Node('khan')
+linkedlist.at_head(nn)
 linkedlist.display()
