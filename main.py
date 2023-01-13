@@ -19,6 +19,14 @@ class LinkedList:
                 tail = tail.next
             tail.next = new_node
 
+    def list_length(self):
+        current = self.head
+        length = 0
+        while current is not None:
+            length += 1
+            current = current.next
+        return length
+
     def at_head(self, new_node):
         temp = self.head
         self.head = new_node
@@ -34,6 +42,9 @@ class LinkedList:
             current = current.next
 
     def insert_at_any(self, new_node, position):
+        if position < 0 or position > self.list_length():
+            print('Invalid position.')
+            return
         if position == 0:
             self.at_head(new_node)
             return
@@ -62,5 +73,5 @@ nn = Node('asad')
 linkedlist.insert(nn)
 
 nn = Node('Daud')
-linkedlist.insert_at_any(nn, 0)
+linkedlist.insert_at_any(nn, 1)
 linkedlist.display()
