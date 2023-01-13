@@ -73,5 +73,5 @@ nn = Node('asad')
 linkedlist.insert(nn)
 
 nn = Node('Daud')
-linkedlist.insert_at_any(nn, 1)
+linkedlist.insert_at_any(nn, 2)
 linkedlist.display()
