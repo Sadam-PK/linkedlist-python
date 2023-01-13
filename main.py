@@ -33,6 +33,19 @@ class LinkedList:
             print(current.data)
             current = current.next
 
+    def at_positio(self, new_node, position):
+        current = self.head
+        current_position = 0
+        previous = None
+        while True:
+            if current_position == position:
+                previous.next = new_node
+                new_node.next = current
+                break
+            previous = current
+            current = current.next
+            current_position += 1
+
 
 nn = Node('sadam')
 
@@ -45,6 +58,6 @@ linkedlist.insert(nn)
 nn = Node('asad')
 linkedlist.insert(nn)
 
-nn = Node('khan')
-linkedlist.at_head(nn)
+nn = Node('Daud')
+linkedlist.at_positio(nn, 1)
 linkedlist.display()
