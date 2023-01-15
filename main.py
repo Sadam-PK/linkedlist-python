@@ -62,6 +62,9 @@ class LinkedList:
 
     def delete_end(self):
         if self.list_length() > 0:
+            if self.head.next is None:
+                self.delete_head()
+                return
             previous = None
             current = self.head
             while current.next is not None:
@@ -98,13 +101,13 @@ linkedlist = LinkedList()
 linkedlist.insert(nn)
 
 nn2 = Node('hamza')
-linkedlist.insert(nn2)
+# linkedlist.insert(nn2)
 
 nn3 = Node('asad')
-linkedlist.insert(nn3)
+# linkedlist.insert(nn3)
 
 nn4 = Node('daud')
-linkedlist.insert_at_any(nn4, 0)
+# linkedlist.insert_at_any(nn4, 0)
 
 linkedlist.display()
 
@@ -114,6 +117,6 @@ print('------------')
 linkedlist.delete_head()
 nn5 = Node('daud-h')
 nn6 = Node('daud-t')
-linkedlist.at_head(nn5)
-linkedlist.insert(nn6)
+# linkedlist.at_head(nn5)
+# linkedlist.insert(nn6)
 linkedlist.display()
