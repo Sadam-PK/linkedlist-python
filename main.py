@@ -61,29 +61,35 @@ class LinkedList:
             current_position += 1
 
     def delete_end(self):
-        previous = None
-        current = self.head
-        while current.next is not None:
-            previous = current
-            current = current.next
-        del current
-        previous.next = None
+        if self.list_length() > 0:
+            previous = None
+            current = self.head
+            while current.next is not None:
+                previous = current
+                current = current.next
+            del current
+            previous.next = None
+        else:
+            print('list is empty')
 
-        # current = self.head
-        # last = self.head
-        # while True:
-        #     if current.next is None:
-        #         last.next = None
-        #         del last
-        #         break
-        #     last = current
-        #     current = current.next
+            # current = self.head
+            # last = self.head
+            # while True:
+            #     if current.next is None:
+            #         last.next = None
+            #         del last
+            #         break
+            #     last = current
+            #     current = current.next
 
     def delete_head(self):
-        temp = self.head
-        self.head = self.head.next
-        temp.next = None
-        del temp
+        if self.list_length() > 0:
+            temp = self.head
+            self.head = self.head.next
+            temp.next = None
+            del temp
+        else:
+            print('list is empty')
 
 
 nn = Node('sadam')
