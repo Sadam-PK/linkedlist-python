@@ -94,6 +94,30 @@ class LinkedList:
         else:
             print('list is empty')
 
+    def delete_at(self, position):
+        if self.list_length() == 0:
+            print('List Empty')
+            return
+        if position < 0 or position >= self.list_length():
+            print('Invalid position.')
+            return
+        if self.list_length() > 0:
+            if position == 0:
+                self.delete_head()
+                return
+            current = self.head
+            current_position = 0
+            previous = None
+            while True:
+                if current_position == position:
+                    previous.next = current.next
+                    current.next = None
+                    del current
+                    break
+                previous = current
+                current = current.next
+                current_position += 1
+
 
 nn = Node('sadam')
 
@@ -101,22 +125,22 @@ linkedlist = LinkedList()
 linkedlist.insert(nn)
 
 nn2 = Node('hamza')
-# linkedlist.insert(nn2)
+linkedlist.insert(nn2)
 
 nn3 = Node('asad')
-# linkedlist.insert(nn3)
+linkedlist.insert(nn3)
 
-nn4 = Node('daud')
-# linkedlist.insert_at_any(nn4, 0)
+# linkedlist.display()
 
-linkedlist.display()
-
-print('------------')
+# print('------------')
 
 # linkedlist.delete_end()
-linkedlist.delete_head()
-nn5 = Node('daud-h')
-nn6 = Node('daud-t')
+# linkedlist.delete_head()
+# nn5 = Node('daud-h')
+# nn6 = Node('daud-t')
 # linkedlist.at_head(nn5)
 # linkedlist.insert(nn6)
+linkedlist.display()
+print('------------')
+linkedlist.delete_at(1)
 linkedlist.display()
