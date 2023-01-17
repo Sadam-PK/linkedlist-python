@@ -118,17 +118,16 @@ class LinkedList:
                 current = current.next
                 current_position += 1
 
-
-nn = Node('sadam')
-
-linkedlist = LinkedList()
-linkedlist.insert(nn)
-
-nn2 = Node('hamza')
-linkedlist.insert(nn2)
-
-nn3 = Node('asad')
-linkedlist.insert(nn3)
+# nn = Node('sadam')
+#
+# linkedlist = LinkedList()
+# linkedlist.insert(nn)
+#
+# nn2 = Node('hamza')
+# linkedlist.insert(nn2)
+#
+# nn3 = Node('asad')
+# linkedlist.insert(nn3)
 
 # linkedlist.display()
 
@@ -140,7 +139,7 @@ linkedlist.insert(nn3)
 # nn6 = Node('daud-t')
 # linkedlist.at_head(nn5)
 # linkedlist.insert(nn6)
-linkedlist.display()
-print('------------')
-linkedlist.delete_at(1)
-linkedlist.display()
+# linkedlist.display()
+# print('------------')
+# linkedlist.delete_at(1)
+# linkedlist.display()
