@@ -2,7 +2,13 @@ from main import Node, LinkedList
 
 
 def swap_nodes(linkedlist, data1, data2):
-    #    # 4 -> 3 -> 5 -> 2 -> 7 -> 1 || 4 -> 7 -> 5 -> 2 -> 3 -> 1
+    # # 4 -> 3 -> 5 -> 2 -> 7 -> 1 || 4 -> 7 -> 5 -> 2 -> 3 -> 1
+    # # 4 is previous
+    # # 3 is first-node
+    # # 2 is previous-second
+    # # 7 is second-node
+    # # 1 is temp node
+
     current = linkedlist.head
     previous = None
     while True:
@@ -13,9 +19,19 @@ def swap_nodes(linkedlist, data1, data2):
         current = current.next
 
     current = linkedlist.head
+    previousSecond = None
     while True:
-        previousSeond = current
+        if current.data == data2:
+            secondNode = current
+            break
+        previousSecond = current
         current = current.next
+
+    previous.next = secondNode
+    temp = secondNode.next
+    secondNode.next = firstNode.next
+    previousSecond.next = firstNode
+    firstNode.next = temp
 
 
 n1 = Node(4)
@@ -35,3 +51,5 @@ linkedlist.insert(n6)
 
 linkedlist.display()
 swap_nodes(linkedlist, 3, 7)
+print('-------------')
+linkedlist.display()
