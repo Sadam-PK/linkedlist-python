@@ -25,8 +25,9 @@ linkedlist.insert(nn2)
 linkedlist.insert(nn3)
 linkedlist.insert(nn4)
 linkedlist.insert(nn5)
-
 linkedlist.display()
+
 print('----------------')
+
 remove(linkedlist)
 linkedlist.display()
