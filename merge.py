@@ -1,6 +1,5 @@
 from main import Node, LinkedList
 
-
 # 1 -> 3 -> 4 || 2 -> 7 -> 9
 # 1 -> 2 -> 3 -> 4 -> 7 -> 9
 
@@ -24,7 +23,6 @@ def merge(first_list, second_list, merge_list):
             current_second.next = None
             merge_list.insert(current_second)
             current_second = current_second_next
-
 
 nn1 = Node(1)
 nn2 = Node(3)
