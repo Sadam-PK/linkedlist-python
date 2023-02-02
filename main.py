@@ -143,3 +143,10 @@ class LinkedList:
 # print('------------')
 # linkedlist.delete_at(1)
 # linkedlist.display()
+
+
+
+
+
+
+
