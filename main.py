@@ -144,17 +144,3 @@ class LinkedList:
 # linkedlist.delete_at(1)
 # linkedlist.display()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
